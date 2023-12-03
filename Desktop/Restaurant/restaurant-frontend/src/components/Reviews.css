@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+
+.review-class {
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3% auto;
+    padding: 2%;
+    background-color: #f1ffdf; /* Subtle background color */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    font-family:'Times New Roman', Times, serif; /* Modern font */
+}
+
+.review-inner {
+    width: 100%;
+    padding: 2%;
+    overflow-y: auto; /* Allows scrolling for overflow content */
+    max-height: 400px; /* Fixed maximum height */
+    text-align: left;
+    border-radius: 10px;
+}
+
+.review_header {
+    background-color: #daffb5;
+    font-size: 2em;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding :15px;
+    border-radius: 10px;
+    font-family:'Times New Roman', Times, serif; /* Modern font */
+}
+
+.individual-review {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.5s ease-in-out;
+}
+
+.individual-review:hover {
+    transform: translateY(-3px); /* Subtle hover effect */
+}
+
+.review-customer-name {
+    color: #30567f; /* Highlight color for names */
+    margin-bottom: 8px;
+}
+
+.review-comment {
+    color: #555;
+    line-height: 2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .review-class {
+        margin: 2% auto;
+        padding: 5%;
+    }
+}

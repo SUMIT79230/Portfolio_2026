@@ -1,0 +1,23 @@
+.header1 {
+    background-color: rgb(214, 245, 255);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+
+    position: fixed; 
+    top: 0;
+    left: 0; 
+    right: 0; 
+    z-index: 1000; 
+}
+
+.header1 h1 {
+    margin: 0;
+    color: #333;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+body {
+    padding-top: 80px;
+}
