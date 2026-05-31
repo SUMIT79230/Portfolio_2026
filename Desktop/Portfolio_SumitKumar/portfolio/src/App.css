@@ -1,0 +1,48 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 68px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0a0a0f;
+  color: #f0f0f5;
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+[data-theme='light'] body {
+  background: #f4f4f8;
+  color: #1a1a2e;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+section {
+  padding: 100px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+[data-theme='dark'] h1,
+[data-theme='dark'] h2,
+[data-theme='dark'] h3,
+[data-theme='dark'] p {
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}

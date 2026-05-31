@@ -1,0 +1,217 @@
+.about {
+  padding: 20px 8% 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.about__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.7s ease 0.1s, transform 0.7s ease 0.1s;
+}
+
+.about--visible .about__header {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+[data-theme='dark'] .about__eyebrow { color: rgba(255, 255, 255, 0.5); }
+[data-theme='light'] .about__eyebrow { color: rgba(0, 0, 0, 0.5); }
+
+.about__eyebrow-line {
+  display: inline-block;
+  width: 32px;
+  height: 2px;
+  border-radius: 2px;
+}
+
+[data-theme='dark'] .about__eyebrow-line { background: rgba(255, 255, 255, 0.4); }
+[data-theme='light'] .about__eyebrow-line { background: rgba(0, 0, 0, 0.3); }
+
+.about__title {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+[data-theme='dark'] .about__title { color: #ffffff; }
+[data-theme='light'] .about__title { color: #0a0a0a; }
+
+.about__title-accent {
+  color: inherit;
+}
+
+.about__services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  z-index: 1;
+}
+
+.about__service-card {
+  padding: 2.4rem 2rem;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  perspective: 800px;
+  transform-style: preserve-3d;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.4s ease,
+              opacity 0.6s ease,
+              border-color 0.4s ease;
+  opacity: 0;
+  transform: translateY(25px);
+  position: relative;
+  overflow: hidden;
+}
+
+[data-theme='dark'] .about__service-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-theme='light'] .about__service-card {
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.about--visible .about__service-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about__service-card:hover {
+  transform: translateY(-12px) scale(1.02);
+}
+
+[data-theme='dark'] .about__service-card:hover {
+  box-shadow:
+    0 25px 60px rgba(255, 255, 255, 0.07),
+    0 10px 20px rgba(255, 255, 255, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+[data-theme='light'] .about__service-card:hover {
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.12),
+    0 10px 20px rgba(0, 0, 0, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  border-color: rgba(0, 0, 0, 0.18);
+}
+
+.about__service-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+}
+
+.about__service-icon svg {
+  width: 20px;
+  height: 20px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.about__service-card:hover .about__service-icon {
+  transform: translateY(-3px) scale(1.08);
+}
+
+.about__service-card--frontend .about__service-icon {
+  background: linear-gradient(135deg, #00d2ff, #0077ff);
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(0, 119, 255, 0.3);
+}
+
+.about__service-card--frontend:hover .about__service-icon {
+  box-shadow: 0 10px 30px rgba(0, 119, 255, 0.45);
+}
+
+.about__service-card--backend .about__service-icon {
+  background: linear-gradient(135deg, #00e676, #009e4f);
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(0, 158, 79, 0.3);
+}
+
+.about__service-card--backend:hover .about__service-icon {
+  box-shadow: 0 10px 30px rgba(0, 158, 79, 0.45);
+}
+
+.about__service-card--cloud .about__service-icon {
+  background: linear-gradient(135deg, #ffb74d, #ff6d00);
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(255, 109, 0, 0.3);
+}
+
+.about__service-card--cloud:hover .about__service-icon {
+  box-shadow: 0 10px 30px rgba(255, 109, 0, 0.45);
+}
+
+.about__service-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+[data-theme='dark'] .about__service-title { color: #ffffff; }
+[data-theme='light'] .about__service-title { color: #0a0a0a; }
+
+.about__service-desc {
+  font-size: 0.9rem;
+  line-height: 1.75;
+  margin: 0;
+}
+
+[data-theme='dark'] .about__service-desc { color: rgba(255, 255, 255, 0.45); }
+[data-theme='light'] .about__service-desc { color: rgba(0, 0, 0, 0.5); }
+
+@media (max-width: 900px) {
+  .about__services {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    padding: 10px 6% 70px;
+    gap: 3rem;
+  }
+
+  .about__services {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+}
