@@ -1,5 +1,5 @@
 import './Projects.css';
-import { FiExternalLink, FiGithub } from 'react-icons/fi';
+import { FiExternalLink } from 'react-icons/fi';
 import { SiStreamlit, SiSpringboot, SiReact, SiPython } from 'react-icons/si';
 import { TbBrain } from 'react-icons/tb';
 import { BiBook } from 'react-icons/bi';
